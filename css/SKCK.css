@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #F7F7F7;
+    --second-bg-color: #F7F7F7;
+    --text-color: #000000;
+    --main-color: #F5B553;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: #000000;  
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.blog-section {
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.blog-section .section-content {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.blog-section .section-content .title {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.blog-section .section-content .title h1 {
+    font-size: 45px;
+    margin-top: 70px;
+}
+
+.blog-section .section-content .title span {
+    font-size: 45px;
+    color: #F5B553;
+    margin-top: 70px;
+}
+
+.blog-section .section-content .title P {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold; 
+}
+
+.blog-section .section-content .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.blog-section .section-content .cards .card {
+    width: 100%;
+    position: relative;
+}
+
+.blog-section .section-content .cards .card img {
+    width: 100%;
+    height: auto;
+    border: var(--main-color);
+    border-radius: 10px;
+}
+
+.blog-section .section-content .cards .card .article {
+    margin-top: 5px;
+    text-align: justify;
+}
+
+.blog-section .section-content .cards .card .article h2 {
+    font-size: 30px;
+}
+
+.blog-section .section-content .cards .card .article p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+ul {
+    margin-left: 30px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.blog-view {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 44.5rem;
+    height: 5rem;
+}
+
+.blog-view .button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: white;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.blog-view .button:hover {
+    color: black
+}
+
+.blog-view .button:nth-child(2) {
+    background: transparent;
+    color: black;
+}
+
+.blog-view .button:nth-child(2):hover {
+    color: var(--bg-color);
+}
+
+.blog-view .button:nth-child(2)::before {
+    background: var(--main-color);
+}
+
+.blog-view .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .3s;
+}
+
+.blog-view .button:hover::before {
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #EBE3D5;
+}
+
+.footer-text p {
+    font-size: 1.4rem;
+}
+
+.footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer-iconTop a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .2s;
+}
+
+.footer-iconTop a:hover::before {
+    width: 100%;
+
+} 
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+    transition: .2s;
+}
+
+.footer-iconTop a:hover i {
+    color: var(--text-color);
+}
